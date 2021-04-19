@@ -1,5 +1,5 @@
 import os
-counter = 0
+countFile = 0
 
 directorys = ('KG', 'MDK0201', 'MDK0202', 'MDK0203', 'OAIP', 'OPBD')
 
@@ -19,16 +19,26 @@ for disc in directorys:
 for disc in directorys:
     print('-----',disc,'-----')
     if disc == 'KG':
-        for i in range(1,kgo + 1):
-            if os.path.isfile(disc+'/KG'+str(i)+endFileFormat):
-                if showFoundedFile:
-                    print(i,'+++')
-            else:
-                print(i,'---')
-    if disc == 'MDK0201':
-        for i in range(1, mdk0201o + 1):
-            if os.path.isfile(disc+'/MDK'+str(i)+endFileFormat):
-                if showFoundedFile:
-                    print(i, '+++')
-            else:
-                print(i, '---')
+        countFile = kgo
+        prefixFile = 'KG'
+    elif disc == 'MDK0201':
+        countFile = mdk0201o
+        prefixFile = 'MDK'
+    elif disc == 'MDK0202':
+        countFile = mdk0202o
+        prefixFile = 'MDK'
+    elif disc == 'MDK0203':
+        countFile = mdk0203o
+        prefixFile = 'MDK'
+    elif disc == 'OAIP':
+        countFile = oaipo
+        prefixFile = 'OA'
+    elif disc == 'OPBD':
+        countFile = opbdo
+        prefixFile = 'OP'
+    for i in range(1,countFile + 1):
+        if os.path.isfile(disc + '/' + prefixFile + str(i) + endFileFormat):
+            if showFoundedFile:
+                print(i,'+++')
+        else:
+            print(i,'---')
