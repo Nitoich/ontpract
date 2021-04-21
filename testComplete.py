@@ -9,7 +9,7 @@ kgo = 37
 mdk0201o = 12
 mdk0202o = 10
 mdk0203o = 8
-oaipo = 32
+oaipo = 33
 opbdo = 11
 
 for disc in directorys:
