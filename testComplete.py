@@ -2,12 +2,13 @@ import os
 import sys
 countFile = 0
 
-directorys = ('KG', 'MDK0201', 'MDK0202', 'MDK0203', 'OAIP', 'OPBD')
+directorys = ('KG', 'MDK1101', 'MDK0201', 'MDK0202', 'MDK0203', 'OAIP', 'OPBD')
 
 endFileFormat = '.docx'
-CurretDirectory = os.path.dirname(sys.argv[0])
+ #CurretDirectory = os.path.dirname(sys.argv[0])
 showFoundedFile = False
 kgo = 37
+mdk1101o = 7
 mdk0201o = 12
 mdk0202o = 10
 mdk0203o = 8
@@ -15,7 +16,7 @@ oaipo = 33
 opbdo = 11
 
 for disc in directorys:
-    if (os.path.exists(CurretDirectory+'/'+disc) == False):
+    if (os.path.exists(disc) == False):
         print(disc, 'not founded!')
 
 for disc in directorys:
@@ -23,6 +24,9 @@ for disc in directorys:
     if disc == 'KG':
         countFile = kgo
         prefixFile = 'KG'
+    elif disc == 'MDK1101':
+        countFile = mdk1101o
+        prefixFile = 'MDK'
     elif disc == 'MDK0201':
         countFile = mdk0201o
         prefixFile = 'MDK'
@@ -39,9 +43,9 @@ for disc in directorys:
         countFile = opbdo
         prefixFile = 'OP'
     for i in range(1,countFile + 1):
-        if os.path.isfile(CurretDirectory+'/'+disc + '/' + prefixFile + str(i) + endFileFormat):
+        if os.path.isfile(disc + '/' + prefixFile + str(i) + endFileFormat):
             if showFoundedFile:
                 print(i,'+++')
         else:
             print(i,'---')
-            print(CurretDirectory+'/'+disc+'/' + prefixFile + str(i) + endFileFormat)
+            #print('/'+disc+'/' + prefixFile + str(i) + endFileFormat)
