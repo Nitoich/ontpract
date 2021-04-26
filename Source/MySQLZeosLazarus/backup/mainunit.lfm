@@ -1,0 +1,68 @@
+object MainForm: TMainForm
+  Left = 314
+  Height = 240
+  Top = 146
+  Width = 320
+  Caption = 'MainForm'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '2.0.10.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 196
+    Top = 8
+    Width = 280
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource
+    TabOrder = 0
+  end
+  object TableList: TComboBox
+    Left = 128
+    Height = 23
+    Top = 208
+    Width = 100
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'Книжный фонд'
+      'Каталог'
+      'Читатели'
+      'Выдача'
+    )
+    OnChange = TableListChange
+    TabOrder = 1
+    Text = 'Книжный фонд'
+  end
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'kargaev'
+    User = 'Nitoich'
+    Password = 'APB25308'
+    Protocol = 'mysql'
+    Left = 40
+    Top = 8
+  end
+  object ZTable: TZTable
+    Connection = ZConnection
+    Active = True
+    TableName = 'book_fond'
+    Left = 40
+    Top = 72
+  end
+  object DataSource: TDataSource
+    DataSet = ZTable
+    Left = 56
+    Top = 136
+  end
+end
