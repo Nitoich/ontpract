@@ -63,10 +63,8 @@ procedure TMainForm.TableListChange(Sender: TObject);
 begin
   ZTable.close;
   case TableList.ItemIndex of
-    0:ZTable.TableName:='book_fond';
-    1:ZTable.TableName:='catalog';
-    2:ZTable.TableName:='chitateli';
-    3:ZTable.TableName:='vidacha';
+    0:ZTable.TableName:='raspisanie';
+    1:ZTable.TableName:='zakaz';
   end;
   ZTable.open;
 end;

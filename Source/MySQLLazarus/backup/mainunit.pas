@@ -58,8 +58,6 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
   self.Width:=round(screen.Width / 2);
   self.height:=round(screen.Height / 2);
-
-  SQLQuery.SQL.Text:='select * from book_fond';
   SetComponentCorrectPos();
 end;
 
@@ -79,10 +77,8 @@ procedure TMainForm.TablesListChange(Sender: TObject);
 begin
   SQLQuery.close;
   case TablesList.ItemIndex of
-    0:SQLQuery.SQL.Text:='select * from book_fond';
-    1:SQLQuery.SQL.Text:='select * from catalog';
-    2:SQLQuery.SQL.Text:='select * from chitateli';
-    3:SQLQuery.SQL.Text:='select * from vidacha';
+    0:SQLQuery.SQL.Text:='select * from raspisanie';
+    1:SQLQuery.SQL.Text:='select * from zakaz';
   end;
   SQLQuery.Open;
 end;

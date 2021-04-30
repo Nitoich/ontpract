@@ -37,21 +37,19 @@ object MainForm: TMainForm
     ItemHeight = 15
     ItemIndex = 0
     Items.Strings = (
-      'Книжный фонд'
-      'Каталог'
-      'Читатели'
-      'Выдача'
+      'Расписание'
+      'Заказы'
     )
     OnChange = TablesListChange
     OnClick = TablesListClick
     OnKeyPress = TablesListKeyPress
     TabOrder = 2
-    Text = 'Книжный фонд'
+    Text = 'Расписание'
   end
   object MySQL57Connection: TMySQL57Connection
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'kargaev'
+    DatabaseName = 'anuar'
     KeepConnection = False
     Password = 'APB25308'
     Transaction = SQLTransaction
@@ -70,52 +68,7 @@ object MainForm: TMainForm
   object SQLQuery: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
     MaxIndexesCount = 4
-    FieldDefs = <    
-      item
-        Name = 'Lib_Nom_book'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'avtor'
-        DataType = ftString
-        Precision = -1
-        Size = 30
-      end    
-      item
-        Name = 'nameBook'
-        DataType = ftString
-        Precision = -1
-        Size = 20
-      end    
-      item
-        Name = 'izd'
-        DataType = ftString
-        Precision = -1
-        Size = 20
-      end    
-      item
-        Name = 'date_release'
-        DataType = ftDate
-        Precision = -1
-      end    
-      item
-        Name = 'count_str'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'tema'
-        DataType = ftString
-        Precision = -1
-        Size = 30
-      end    
-      item
-        Name = 'price'
-        DataType = ftBCD
-        Precision = -1
-        Size = 2
-      end>
+    FieldDefs = <>
     Active = True
     Database = MySQL57Connection
     Transaction = SQLTransaction

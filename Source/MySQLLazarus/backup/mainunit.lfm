@@ -1,11 +1,11 @@
 object MainForm: TMainForm
   Left = 330
-  Height = 240
+  Height = 153
   Top = 156
-  Width = 319
+  Width = 288
   Caption = 'MainForm'
-  ClientHeight = 240
-  ClientWidth = 319
+  ClientHeight = 153
+  ClientWidth = 288
   OnCreate = FormCreate
   OnResize = FormResize
   Position = poDesktopCenter
@@ -21,26 +21,23 @@ object MainForm: TMainForm
     TabOrder = 0
   end
   object SaveButton: TButton
-    Left = 184
+    Left = 208
     Height = 25
-    Top = 160
+    Top = 24
     Width = 75
     Caption = 'SaveButton'
     OnClick = SaveButtonClick
     TabOrder = 1
   end
   object TablesList: TComboBox
-    Left = 216
+    Left = 208
     Height = 23
     Top = 0
-    Width = 100
+    Width = 76
     ItemHeight = 15
-    ItemIndex = 0
     Items.Strings = (
-      'Книжный фонд'
-      'Каталог'
-      'Читатели'
-      'Выдача'
+      'Расписание'
+      'Заказы'
     )
     OnChange = TablesListChange
     OnClick = TablesListClick
@@ -51,70 +48,41 @@ object MainForm: TMainForm
   object MySQL57Connection: TMySQL57Connection
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'kargaev'
+    DatabaseName = 'anuar'
     KeepConnection = False
     Password = 'APB25308'
     Transaction = SQLTransaction
     UserName = 'Nitoich'
     HostName = 'localhost'
     SkipLibraryVersionCheck = False
-    Left = 240
-    Top = 72
+    Left = 48
+    Top = 16
   end
   object SQLTransaction: TSQLTransaction
     Active = True
     Database = MySQL57Connection
-    Left = 240
-    Top = 136
+    Left = 120
+    Top = 80
   end
   object SQLQuery: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
     MaxIndexesCount = 4
     FieldDefs = <    
       item
+        Name = 'Invent_nom_book'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
         Name = 'Lib_Nom_book'
         DataType = ftInteger
         Precision = -1
       end    
       item
-        Name = 'avtor'
+        Name = 'otm_o_vidache'
         DataType = ftString
         Precision = -1
         Size = 30
-      end    
-      item
-        Name = 'nameBook'
-        DataType = ftString
-        Precision = -1
-        Size = 20
-      end    
-      item
-        Name = 'izd'
-        DataType = ftString
-        Precision = -1
-        Size = 20
-      end    
-      item
-        Name = 'date_release'
-        DataType = ftDate
-        Precision = -1
-      end    
-      item
-        Name = 'count_str'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'tema'
-        DataType = ftString
-        Precision = -1
-        Size = 30
-      end    
-      item
-        Name = 'price'
-        DataType = ftBCD
-        Precision = -1
-        Size = 2
       end>
     Active = True
     Database = MySQL57Connection
@@ -123,12 +91,12 @@ object MainForm: TMainForm
       'select * from book_fond;'
     )
     Params = <>
-    Left = 56
-    Top = 176
+    Left = 48
+    Top = 72
   end
   object DataSource: TDataSource
     DataSet = SQLQuery
-    Left = 152
-    Top = 184
+    Left = 120
+    Top = 16
   end
 end

@@ -46,7 +46,7 @@ object MainForm: TMainForm
     Connected = True
     HostName = 'localhost'
     Port = 0
-    Database = 'kargaev'
+    Database = 'anuar'
     User = 'Nitoich'
     Password = 'APB25308'
     Protocol = 'mysql'
@@ -55,8 +55,7 @@ object MainForm: TMainForm
   end
   object ZTable: TZTable
     Connection = ZConnection
-    Active = True
-    TableName = 'book_fond'
+    TableName = 'raspisanie'
     Left = 40
     Top = 72
   end
