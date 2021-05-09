@@ -1,0 +1,169 @@
+object MainForm: TMainForm
+  Left = 501
+  Height = 326
+  Top = 317
+  Width = 379
+  BorderStyle = bsToolWindow
+  Caption = 'Calculator'
+  ClientHeight = 326
+  ClientWidth = 379
+  Position = poScreenCenter
+  LCLVersion = '2.0.10.0'
+  object ResultEdit: TEdit
+    Left = 16
+    Height = 23
+    Top = 8
+    Width = 348
+    OnKeyPress = ResultEditKeyPress
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Tag = 1
+    Left = 16
+    Height = 60
+    Top = 40
+    Width = 60
+    Caption = '1'
+    OnClick = ButtonClick
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Tag = 1
+    Left = 88
+    Height = 60
+    Top = 40
+    Width = 60
+    Caption = '2'
+    OnClick = ButtonClick
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Tag = 1
+    Left = 160
+    Height = 60
+    Top = 40
+    Width = 60
+    Caption = '3'
+    OnClick = ButtonClick
+    TabOrder = 3
+  end
+  object Button4: TButton
+    Tag = 1
+    Left = 16
+    Height = 60
+    Top = 112
+    Width = 60
+    Caption = '4'
+    OnClick = ButtonClick
+    TabOrder = 4
+  end
+  object Button5: TButton
+    Tag = 1
+    Left = 88
+    Height = 60
+    Top = 112
+    Width = 60
+    Caption = '5'
+    OnClick = ButtonClick
+    TabOrder = 5
+  end
+  object Button6: TButton
+    Tag = 1
+    Left = 160
+    Height = 60
+    Top = 112
+    Width = 60
+    Caption = '6'
+    OnClick = ButtonClick
+    TabOrder = 6
+  end
+  object Button7: TButton
+    Tag = 1
+    Left = 16
+    Height = 60
+    Top = 184
+    Width = 60
+    Caption = '7'
+    OnClick = ButtonClick
+    TabOrder = 7
+  end
+  object Button8: TButton
+    Tag = 1
+    Left = 88
+    Height = 60
+    Top = 184
+    Width = 60
+    Caption = '8'
+    OnClick = ButtonClick
+    TabOrder = 8
+  end
+  object Button9: TButton
+    Tag = 1
+    Left = 160
+    Height = 60
+    Top = 184
+    Width = 60
+    Caption = '9'
+    OnClick = ButtonClick
+    TabOrder = 9
+  end
+  object Button0: TButton
+    Tag = 1
+    Left = 16
+    Height = 60
+    Top = 256
+    Width = 204
+    Caption = '0'
+    OnClick = ButtonClick
+    TabOrder = 10
+  end
+  object PlusButton: TButton
+    Tag = 2
+    Left = 232
+    Height = 60
+    Top = 40
+    Width = 60
+    Caption = '+'
+    OnClick = ButtonClick
+    TabOrder = 11
+  end
+  object MinusButton: TButton
+    Tag = 2
+    Left = 304
+    Height = 60
+    Top = 40
+    Width = 60
+    Caption = '-'
+    OnClick = ButtonClick
+    TabOrder = 12
+  end
+  object MultiButton: TButton
+    Tag = 2
+    Left = 232
+    Height = 60
+    Top = 112
+    Width = 60
+    Caption = '*'
+    OnClick = ButtonClick
+    TabOrder = 13
+  end
+  object DivButton: TButton
+    Tag = 2
+    Left = 304
+    Height = 60
+    Top = 112
+    Width = 60
+    Caption = '/'
+    OnClick = ButtonClick
+    TabOrder = 14
+  end
+  object ResultButton: TButton
+    Left = 232
+    Height = 132
+    Top = 184
+    Width = 132
+    Caption = '='
+    OnClick = ButtonClick
+    TabOrder = 15
+  end
+end

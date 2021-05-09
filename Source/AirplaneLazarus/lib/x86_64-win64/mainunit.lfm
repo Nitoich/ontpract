@@ -1,0 +1,62 @@
+object MainForm: TMainForm
+  Left = 555
+  Height = 501
+  Top = 290
+  Width = 815
+  Caption = 'MainForm'
+  ClientHeight = 501
+  ClientWidth = 815
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  Position = poScreenCenter
+  LCLVersion = '2.0.10.0'
+  object Airplane1: TImage
+    Left = 0
+    Height = 25
+    Top = 24
+    Width = 60
+  end
+  object Airplane2: TImage
+    Left = 0
+    Height = 25
+    Top = 72
+    Width = 60
+  end
+  object Player: TImage
+    Left = 384
+    Height = 60
+    Top = 440
+    Width = 40
+  end
+  object Bullet: TShape
+    Left = 392
+    Height = 20
+    Top = 240
+    Width = 20
+    Brush.Color = clBlack
+    Shape = stCircle
+    Visible = False
+  end
+  object Bomb1: TShape
+    Left = 240
+    Height = 40
+    Top = 168
+    Width = 40
+    Brush.Color = clRed
+    Shape = stCircle
+    Visible = False
+  end
+  object MainLoop: TTimer
+    Interval = 15
+    OnTimer = MainLoopTimer
+    Left = 696
+    Top = 64
+  end
+  object Boombing: TTimer
+    Interval = 3000
+    OnTimer = BoombingTimer
+    Left = 696
+    Top = 144
+  end
+end
